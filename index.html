@@ -3,40 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DD-Gabelstapler</title>
+  <title>DD-Gabelstapler – Staplerzentrum Moosburg</title>
+  <meta name="description" content="Gebrauchte Gabelstapler kaufen und reparieren lassen. DD-Gabelstapler Staplerzentrum in Wang bei Freising, Bayern.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f5a623">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>DD-Gabelstapler</h1>
-    <p>Ihr Partner für Gabelstapler – Verkauf, Vermietung und Service</p>
+    <p>Gebrauchte Gabelstapler – Verkauf &amp; Reparatur in Wang bei Freising</p>
+    <button id="install-btn" hidden>App installieren</button>
   </header>
 
   <nav>
-    <a href="#angebot">Angebot</a>
-    <a href="#service">Service</a>
+    <a href="#bestand">Bestand</a>
+    <a href="#service">Reparatur</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 
   <main>
-    <section id="angebot">
-      <h2>Unser Angebot</h2>
-      <p>Wir bieten neue und gebrauchte Gabelstapler für jeden Bedarf – vom Elektrostapler bis zum Diesel-Gabelstapler.</p>
+    <section id="bestand">
+      <h2>Aktueller Bestand</h2>
+      <p>Wir verkaufen ausschließlich geprüfte, gebrauchte Gabelstapler in gutem Zustand. Aktuelle Angebote finden Sie auch auf unseren Marktplatz-Profilen.</p>
+      <div class="grid" id="inventory">
+        <div class="card placeholder">
+          <p>Neue Angebote folgen in Kürze.</p>
+        </div>
+      </div>
     </section>
 
     <section id="service">
-      <h2>Service &amp; Wartung</h2>
-      <p>Regelmäßige Wartung, Reparaturen und Ersatzteile für alle gängigen Gabelstapler-Modelle.</p>
+      <h2>Reparatur &amp; Wartung</h2>
+      <p>Egal ob Elektro- oder Dieselstapler – wir reparieren und warten gebrauchte Gabelstapler aller gängigen Marken. Von der Diagnose über Ersatzteile bis zur fertigen Reparatur.</p>
     </section>
 
     <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Rufen Sie uns an oder schreiben Sie uns eine E-Mail – wir beraten Sie gerne.</p>
+      <h2>Kontakt &amp; Anfrage</h2>
+      <p>Interesse an einem Stapler oder eine Reparaturanfrage? Schreiben Sie uns direkt.</p>
+      <form id="kontaktform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefon">Telefon (optional)</label>
+        <input type="tel" id="telefon" name="telefon">
+
+        <label for="nachricht">Nachricht</label>
+        <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
+
+        <button type="submit">Anfrage senden</button>
+        <p id="form-status" role="status"></p>
+      </form>
+
+      <div class="adresse">
+        <h3>Adresse</h3>
+        <p>
+          DD-Gabelstapler Staplerzentrum Moosburg<br>
+          Normstahlstraße 1-3, Halle 10<br>
+          85368 Wang (Ortsteil Thalbach)<br>
+          Bayern
+        </p>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 DD-Gabelstapler</p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

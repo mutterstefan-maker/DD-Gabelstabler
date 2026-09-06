@@ -1,0 +1,17 @@
+{
+  "name": "DD-Gabelstapler",
+  "short_name": "DD-Gabelstapler",
+  "description": "Gebrauchte Gabelstapler – Verkauf & Reparatur in Wang bei Freising",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f7f7",
+  "theme_color": "#f5a623",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
