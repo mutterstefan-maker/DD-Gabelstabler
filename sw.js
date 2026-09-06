@@ -1,5 +1,13 @@
 const CACHE_NAME = "dd-gabelstapler-v1";
-const ASSETS = ["./", "./index.html", "./style.css", "./app.js", "./manifest.json"];
+const ASSETS = [
+  "./",
+  "./index.html",
+  "./impressum.html",
+  "./datenschutz.html",
+  "./style.css",
+  "./app.js",
+  "./manifest.json"
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

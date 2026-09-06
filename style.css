@@ -18,13 +18,39 @@ body {
 header {
   background: var(--dark);
   color: white;
-  padding: 2rem 1rem;
   text-align: center;
+}
+
+.hazard-stripe {
+  height: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--primary),
+    var(--primary) 12px,
+    var(--dark) 12px,
+    var(--dark) 24px
+  );
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.forklift-icon {
+  width: 110px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 header h1 {
   margin: 0;
   color: var(--primary);
+  letter-spacing: 0.5px;
 }
 
 #install-btn {
@@ -64,6 +90,12 @@ main {
 
 section {
   margin-bottom: 2.5rem;
+}
+
+section h2 {
+  display: inline-block;
+  border-bottom: 4px solid var(--primary);
+  padding-bottom: 0.25rem;
 }
 
 .grid {
@@ -133,4 +165,25 @@ footer {
   padding: 1rem;
   background: var(--dark);
   color: white;
+}
+
+.legal-links {
+  margin-top: 0.5rem;
+}
+
+.legal-links a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+.legal-page main {
+  max-width: 700px;
+}
+
+.legal-page h2 {
+  margin-top: 2rem;
 }
