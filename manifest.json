@@ -4,8 +4,8 @@
   "description": "Gebrauchte Gabelstapler – Verkauf & Reparatur in Wang bei Freising",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f7f7f7",
-  "theme_color": "#f5a623",
+  "background_color": "#0b0b0c",
+  "theme_color": "#0b0b0c",
   "icons": [
     {
       "src": "icons/icon.svg",

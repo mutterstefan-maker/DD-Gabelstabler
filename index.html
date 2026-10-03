@@ -3,96 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DD-Gabelstapler – Staplerzentrum Moosburg</title>
-  <meta name="description" content="Gebrauchte Gabelstapler kaufen und reparieren lassen. DD-Gabelstapler Staplerzentrum in Wang bei Freising, Bayern.">
+  <title>DD-Gabelstapler – Gebrauchte Gabelstapler &amp; Reparatur bei Freising</title>
+  <meta name="description" content="Geprüfte gebrauchte Gabelstapler kaufen und reparieren lassen. DD-Gabelstapler in Wang bei Freising, Bayern.">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#f5a623">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0b0b0c">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="hazard-stripe"></div>
-    <div class="header-content">
-      <svg class="forklift-icon" viewBox="0 0 200 140" aria-hidden="true">
-        <rect x="70" y="60" width="60" height="35" rx="4" fill="#f5a623"/>
-        <rect x="80" y="30" width="12" height="35" fill="#333"/>
-        <circle cx="85" cy="110" r="14" fill="#222" stroke="#555" stroke-width="4"/>
-        <circle cx="140" cy="110" r="14" fill="#222" stroke="#555" stroke-width="4"/>
-        <rect x="130" y="70" width="20" height="25" fill="#f5a623"/>
-        <rect x="18" y="20" width="6" height="70" fill="#999"/>
-        <rect x="10" y="55" width="30" height="8" fill="#999"/>
-        <rect x="10" y="70" width="30" height="8" fill="#999"/>
-        <rect x="24" y="18" width="56" height="6" fill="#777"/>
-      </svg>
-      <div>
-        <h1>DD-Gabelstapler</h1>
-        <p>Gebrauchte Gabelstapler – Verkauf &amp; Reparatur in Wang bei Freising</p>
-        <button id="install-btn" hidden>App installieren</button>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="DD-Gabelstapler Startseite">
+        <span class="brand-mark">DD</span>
+        <span class="brand-name">Gabelstapler</span>
+      </a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#bestand">Bestand</a>
+        <a href="#service">Reparatur</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a href="tel:+4915161112391" class="btn btn-primary btn-sm header-cta">Anrufen</a>
     </div>
-    <div class="hazard-stripe"></div>
   </header>
 
-  <nav>
-    <a href="#bestand">Bestand</a>
-    <a href="#service">Reparatur</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-
-  <main>
-    <section id="bestand">
-      <h2>Aktueller Bestand</h2>
-      <p>Wir verkaufen ausschließlich geprüfte, gebrauchte Gabelstapler in gutem Zustand. Aktuelle Angebote finden Sie auch auf unseren Marktplatz-Profilen.</p>
-      <div class="grid" id="inventory">
-        <div class="card placeholder">
-          <p>Neue Angebote folgen in Kürze.</p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Wang bei Freising · Bayern</p>
+          <h1>Gebrauchte Gabelstapler.<br><span class="accent">Geprüft. Repariert. Einsatzbereit.</span></h1>
+          <p class="lead">Wir verkaufen geprüfte gebrauchte Stapler und reparieren Elektro- und Dieselstapler aller gängigen Marken – schnell, fair und persönlich.</p>
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-primary">Anfrage stellen</a>
+            <a href="#bestand" class="btn btn-ghost">Bestand ansehen</a>
+          </div>
+          <button id="install-btn" class="btn-link" hidden>App installieren</button>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 240 180" class="forklift">
+            <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M40 20 V140"/>
+              <path d="M52 20 V140"/>
+              <path d="M30 128 H90"/>
+              <path d="M30 108 H90"/>
+              <path d="M90 140 V60 H140 L160 30 H190 V100"/>
+              <path d="M90 100 H215 V140 H90"/>
+              <path d="M160 30 V60 H140"/>
+            </g>
+            <circle cx="115" cy="148" r="18" fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="190" cy="148" r="18" fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="115" cy="148" r="5" class="hub"/>
+            <circle cx="190" cy="148" r="5" class="hub"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <section id="service">
-      <h2>Reparatur &amp; Wartung</h2>
-      <p>Egal ob Elektro- oder Dieselstapler – wir reparieren und warten gebrauchte Gabelstapler aller gängigen Marken. Von der Diagnose über Ersatzteile bis zur fertigen Reparatur.</p>
+    <section class="features">
+      <div class="container feature-grid">
+        <div class="feature">
+          <span class="feature-num">01</span>
+          <h3>Geprüfter Gebrauchtbestand</h3>
+          <p>Jeder Stapler wird vor dem Verkauf technisch durchgesehen.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-num">02</span>
+          <h3>Reparatur &amp; Wartung</h3>
+          <p>Diagnose, Ersatzteile und Instandsetzung aus einer Hand.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-num">03</span>
+          <h3>Elektro &amp; Diesel</h3>
+          <p>Erfahrung mit allen gängigen Antriebsarten und Marken.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="kontakt">
-      <h2>Kontakt &amp; Anfrage</h2>
-      <p>Interesse an einem Stapler oder eine Reparaturanfrage? Schreiben Sie uns direkt.</p>
-      <form id="kontaktform">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+    <section id="bestand" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Verkauf</p>
+          <h2>Aktueller Bestand</h2>
+          <p class="section-lead">Ausschließlich geprüfte, gebrauchte Gabelstapler in gutem Zustand. Aktuelle Angebote finden Sie auch auf unseren Marktplatz-Profilen.</p>
+        </div>
+        <div class="grid" id="inventory"></div>
+        <div class="card placeholder search-cta">
+          <p>Nicht das Passende dabei? Wir suchen gezielt für Sie.</p>
+          <a href="#kontakt" class="btn-link">Suchauftrag stellen →</a>
+        </div>
+      </div>
+    </section>
 
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" required>
+    <section id="service" class="section section-alt">
+      <div class="container service-inner">
+        <div class="section-head">
+          <p class="eyebrow">Werkstatt</p>
+          <h2>Reparatur &amp; Wartung</h2>
+          <p class="section-lead">Egal ob Elektro- oder Dieselstapler – wir reparieren und warten gebrauchte Gabelstapler aller gängigen Marken.</p>
+        </div>
+        <ul class="checklist">
+          <li>Fehlerdiagnose</li>
+          <li>Ersatzteilbeschaffung</li>
+          <li>Instandsetzung &amp; Reparatur</li>
+          <li>Regelmäßige Wartung</li>
+        </ul>
+      </div>
+    </section>
 
-        <label for="telefon">Telefon (optional)</label>
-        <input type="tel" id="telefon" name="telefon">
+    <section id="kontakt" class="section">
+      <div class="container contact-inner">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Kontakt</p>
+            <h2>Anfrage stellen</h2>
+            <p class="section-lead">Interesse an einem Stapler oder eine Reparatur? Schreiben Sie uns – wir melden uns zeitnah.</p>
+          </div>
+          <form id="kontaktform">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="telefon">Telefon <span class="optional">(optional)</span></label>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="nachricht">Nachricht</label>
+              <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Anfrage senden</button>
+            <p id="form-status" role="status"></p>
+          </form>
+        </div>
 
-        <label for="nachricht">Nachricht</label>
-        <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
-
-        <button type="submit">Anfrage senden</button>
-        <p id="form-status" role="status"></p>
-      </form>
-
-      <div class="adresse">
-        <h3>Adresse</h3>
-        <p>
-          DD-Gabelstapler Dürheimer Dennis<br>
-          Normstahlstraße 3<br>
-          85368 Wang OT Thalbach<br>
-          Bayern
-        </p>
-        <p>Telefon: <a href="tel:+4915161112391">01516 1112391</a></p>
+        <aside class="contact-card">
+          <h3>DD-Gabelstapler</h3>
+          <p class="muted">Dürheimer Dennis</p>
+          <address>
+            Normstahlstraße 3<br>
+            85368 Wang OT Thalbach<br>
+            Bayern
+          </address>
+          <a href="tel:+4915161112391" class="contact-phone">01516 1112391</a>
+          <div class="contact-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=DD-Gabelstapler+D%C3%BCrheimer+Dennis+Normstahlstra%C3%9Fe+3+85368+Wang" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Route planen</a>
+            <a href="https://share.google/BTHhWk93A1nCKW1MD" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Google-Profil &amp; Bewertungen ↗</a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 DD-Gabelstapler</p>
-    <p class="legal-links"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 DD-Gabelstapler</p>
+      <p class="legal-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></p>
+    </div>
   </footer>
 
+  <script src="bestand.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
