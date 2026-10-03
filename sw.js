@@ -1,4 +1,4 @@
-const CACHE_NAME = "dd-gabelstapler-v3";
+const CACHE_NAME = "dd-gabelstapler-v4";
 const ASSETS = [
   "./",
   "./index.html",
@@ -14,7 +14,10 @@ const ASSETS = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+    // cache: "reload" umgeht den HTTP-Cache, sonst landen veraltete Dateien im neuen Cache.
+    caches.open(CACHE_NAME).then((cache) =>
+      cache.addAll(ASSETS.map((url) => new Request(url, { cache: "reload" })))
+    )
   );
   self.skipWaiting();
 });
@@ -29,9 +32,9 @@ self.addEventListener("activate", (event) => {
 
 // Network first, damit Änderungen sofort sichtbar sind; Cache nur als Offline-Fallback.
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") return;
+  if (event.request.method !== "GET" || new URL(event.request.url).origin !== location.origin) return;
   event.respondWith(
-    fetch(event.request)
+    fetch(event.request, { cache: "no-cache" })
       .then((response) => {
         const copy = response.clone();
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
