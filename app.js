@@ -50,19 +50,3 @@ inventory.innerHTML = verfuegbar.length
       </div>
     </a>`).join("")
   : `<div class="card placeholder"><p>Neue Angebote folgen in Kürze.</p></div>`;
-
-// Vorausgefüllte Anfrage, z.B. von der Fahrzeug-Detailseite.
-const vorbelegung = new URLSearchParams(location.search).get("anfrage");
-if (vorbelegung) {
-  document.getElementById("nachricht").value = vorbelegung + "\n\n";
-}
-
-// Kein Backend angebunden - Anfragen landen aktuell nur lokal im Browser.
-const form = document.getElementById("kontaktform");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  status.textContent = "Danke für Ihre Anfrage! Wir melden uns zeitnah.";
-  form.reset();
-});

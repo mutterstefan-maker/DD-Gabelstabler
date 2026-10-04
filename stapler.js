@@ -18,7 +18,7 @@ if (!stapler) {
 } else {
   document.title = `${stapler.titel} – DD-Gabelstapler`;
   const bilder = Array.from({ length: stapler.bilder }, (_, i) => bildPfad(stapler, i + 1));
-  const anfrage = encodeURIComponent(`Anfrage zu: ${stapler.titel}`);
+  const whatsapp = `https://wa.me/4915161112391?text=${encodeURIComponent(`Hallo, ich interessiere mich für den ${stapler.titel}: ${location.href}`)}`;
 
   main.insertAdjacentHTML("beforeend", `
     <div class="detail-grid">
@@ -49,7 +49,7 @@ if (!stapler) {
           ${stapler.eckdaten.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd></div>`).join("")}
         </dl>
         <div class="detail-actions">
-          <a href="index.html?anfrage=${anfrage}#kontakt" class="btn btn-primary">Anfrage stellen</a>
+          <a href="${whatsapp}" target="_blank" rel="noopener" class="btn btn-primary">Anfrage per WhatsApp</a>
           <a href="tel:+4915161112391" class="btn btn-ghost">01516 1112391</a>
         </div>
         ${stapler.kleinanzeigen ? `<a href="${stapler.kleinanzeigen}" target="_blank" rel="noopener" class="btn-link external-link">Anzeige auf Kleinanzeigen ansehen ↗</a>` : ""}

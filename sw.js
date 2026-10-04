@@ -1,4 +1,4 @@
-const CACHE_NAME = "dd-gabelstapler-v4";
+const CACHE_NAME = "dd-gabelstapler-v5";
 const ASSETS = [
   "./",
   "./index.html",
